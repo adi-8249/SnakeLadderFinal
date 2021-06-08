@@ -16,6 +16,25 @@ namespace SnakeLadderProgram
             int dicenum = random.Next(1,6);
             Console.WriteLine("Player1 got: " +dicenum);
 
+            int checkOption = random.Next(1,3);
+            if (checkOption == 1)
+            {
+                Console.WriteLine("No play for player1");
+                Console.WriteLine("Your position is: " + Player1Position);
+            }
+            if (checkOption == 2)
+            {
+                Console.WriteLine("Player1 got Ladder");
+                Player1Position += dicenum;
+                Console.WriteLine("Player1 position :" + Player1Position);
+            }
+            if (checkOption == 3)
+            {
+                Console.WriteLine("Player1 got SnakeFace");
+                Player1Position -= dicenum;
+                Console.WriteLine("Player1 position :" + Player1Position);
+            }
+
         }
     }
 }
