@@ -28,6 +28,12 @@ namespace SnakeLadderProgram
                 {
                     Console.WriteLine("Player1 got Ladder");
                     Player1Position += dicenum;
+
+                    if (Player1Position > 100)
+                    {
+                        Player1Position -= dicenum;
+
+                    }
                     Console.WriteLine("Player1 position :" + Player1Position);
                 }
                 if (checkOption == 3)
