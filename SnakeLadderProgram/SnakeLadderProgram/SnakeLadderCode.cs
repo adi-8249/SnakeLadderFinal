@@ -9,16 +9,18 @@ namespace SnakeLadderProgram
         public void Start()
         {
             int Player1Position = 0;
+            int diceCount = 0;
 
             while (Player1Position != 100)
             {
+                diceCount++;
                 Console.WriteLine("Press Y here to roll dice");
                 string userinput = Console.ReadLine();
                 Random random = new Random();
-                int dicenum = random.Next(1, 6);
+                int dicenum = random.Next(1, 7);
                 Console.WriteLine("Player1 got: " + dicenum);
 
-                int checkOption = random.Next(1, 3);
+                int checkOption = random.Next(1, 4);
                 if (checkOption == 1)
                 {
                     Console.WriteLine("No play for player1");
@@ -47,6 +49,8 @@ namespace SnakeLadderProgram
                     Console.WriteLine("Player1 position :" + Player1Position);
                 }
             }
+            Console.WriteLine("For win user rolled the dice" + diceCount);
+
         }
     }
 }
